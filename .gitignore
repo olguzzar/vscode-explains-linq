@@ -1,0 +1,37 @@
+# Visual Studio Code
+.vscode/
+
+# Build output
+bin/
+obj/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# MSTest test Results
+TestResults/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+
+# Resharper files
+_ReSharper*/
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Build directories
+node_modules/
+bower_components/
