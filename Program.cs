@@ -41,10 +41,16 @@ class Program
         };
 
         // LINQ queries
+        /// <summary>
+        /// This LINQ query selects all students whose age is greater than 20.
+        /// </summary>
         var query1 = from s in students
                      where s.Age > 20
                      select s;
 
+        /// <summary>
+        /// This LINQ query joins the students and grades collections on the student ID and selects the name of the student and the course they scored 80 or above in.
+        /// </summary>
         var query2 = from s in students
                      join g in grades on s.Id equals g.StudentId
                      where g.Score >= 80
@@ -55,7 +61,7 @@ class Program
                      select s;
 
         var query4 = from g in grades
-                     where g.Course?.Contains("Algebra") == true
+                     where g.Course?.Contains("Algbra") == true
                      select g;
 
         var query5 = from s in students
