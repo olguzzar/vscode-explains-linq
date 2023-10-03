@@ -55,7 +55,7 @@ class Program
                      select s;
 
         var query4 = from g in grades
-                     where g.Course.Contains("Algbra")
+                     where g.Course?.Contains("Algebra") == true
                      select g;
 
         var query5 = from s in students
