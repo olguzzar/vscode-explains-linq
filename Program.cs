@@ -41,10 +41,16 @@ class Program
         };
 
         // LINQ queries
+        /// <summary>
+        /// This LINQ query selects all students whose age is greater than 20.
+        /// </summary>
         var query1 = from s in students
                      where s.Age > 20
                      select s;
 
+        /// <summary>
+        /// This LINQ query joins the students and grades collections on the student ID, filters the results to only include grades of 80 or higher, and selects the student's name and the course for each matching record.
+        /// </summary>
         var query2 = from s in students
                      join g in grades on s.Id equals g.StudentId
                      where g.Score >= 80
@@ -54,9 +60,7 @@ class Program
                      where s.Major == "Computer Science"
                      select s;
 
-        var query4 = from g in grades
-                     where g.Course?.Contains("Algbra") == true
-                     select g;
+        var query4 = GetQuery4(students, grades);
 
         var query5 = from s in students
                      join g in grades on s.Id equals g.StudentId
@@ -93,6 +97,14 @@ class Program
         {
             Console.WriteLine($"{result.Name}: {result.Course}");
         }
+    }
+
+    public static IEnumerable<dynamic> GetQuery4(List<Student> students, List<Grade> grades)
+    {
+        var query = from g in grades
+                     where g.Course.Contains("Algebra")
+                     select g;
+        return query;
     }
 }
 
