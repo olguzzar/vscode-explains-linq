@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.5.1" />
+  </ItemGroup>
+
 </Project>
