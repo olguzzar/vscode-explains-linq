@@ -7,3 +7,4 @@ To run the project, in the terminal, run the command `dotnet run`
 
 ## What is LINQ?
 LINQ (Language Integrated Query) is a feature in C# that allows you to query data from different data sources such as arrays, collections, databases, and XML files using a syntax similar to SQL. It provides a consistent way to query data regardless of the data source. This can make your code more readable and maintainable. Additionally, LINQ can improve performance by allowing you to filter and sort data on the server side before returning it to your application.
+
